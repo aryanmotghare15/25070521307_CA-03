@@ -1,0 +1,24 @@
+:root { --bg:#EAF0F4; --ink:#16263A; --card:#fff; --line:#CBD6E0; --accent:#0E7C7B; --hi:#E4572E; --mid:#F0A202; --lo:#6C8EAD; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:'Instrument Sans',system-ui,sans-serif; }
+.app { max-width:1180px; margin:0 auto; padding:24px 20px 60px; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(2.6rem,7vw,4.5rem); letter-spacing:-.04em; margin:0; }
+.search { max-width:260px; }
+input, select, button { font:inherit; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px; background:#fff; color:var(--ink); }
+input:focus, select:focus, button:focus-visible { outline:3px solid var(--accent); outline-offset:1px; }
+.composer { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin:20px 0 28px; padding:16px; background:var(--card); border-radius:16px; }
+button { cursor:pointer; background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+button.ghost { background:transparent; color:var(--ink); border-color:var(--line); padding:6px 10px; font-size:.85rem; font-weight:500; }
+button.danger { color:var(--hi); }
+.board { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; align-items:start; }
+.col h2 { font-family:'Bricolage Grotesque',sans-serif; font-size:1.2rem; margin:0 0 12px; }
+.count { font-size:.8rem; background:var(--ink); color:#fff; border-radius:99px; padding:2px 9px; margin-left:6px; }
+.card { background:var(--card); border-radius:14px; padding:14px 16px; margin-bottom:12px; border-left:6px solid var(--mid); }
+.card.p-high { border-left-color:var(--hi); } .card.p-low { border-left-color:var(--lo); }
+.card h3 { margin:0 0 4px; font-size:1.05rem; } .card p { margin:0 0 8px; }
+.meta { display:flex; flex-wrap:wrap; gap:6px; font-size:.82rem; color:#4C5F73; }
+.tag { background:var(--bg); padding:2px 8px; border-radius:99px; }
+.actions { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.muted { color:#5A6B7C; } .error { background:#FDE7E1; color:#8A2A12; padding:10px 14px; border-radius:10px; }
+@media (prefers-reduced-motion:no-preference) { button { transition:transform .1s; } button:active { transform:scale(.97); } }
